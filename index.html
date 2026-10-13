@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediCare Equipments | Hospital Equipment Supplier India</title>
+  <!-- Font Awesome Icons (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background-color: #f8faff;
+      color: #1e2b3c;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header / Navbar */
+    .top-bar {
+      background: #0b3b5c;
+      color: white;
+      padding: 8px 0;
+      font-size: 0.9rem;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-bar i {
+      margin-right: 6px;
+      color: #9fc9f3;
+    }
+
+    .top-bar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 500;
+    }
+
+    .top-bar a:hover {
+      color: #b3d9ff;
+    }
+
+    header {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #0b3b5c;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #1e7e34;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e2b3c;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1e7e34;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1e7e34;
+      color: white !important;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .btn:hover {
+      background: #14632a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(30, 126, 52, 0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #1e7e34;
+      color: #1e7e34 !important;
+    }
+
+    .btn-outline:hover {
+      background: #1e7e34;
+      color: white !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #eef6ff 0%, #d9e9fa 100%);
+      padding: 60px 0 70px;
+    }
+
+    .hero .container {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1 1 400px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1e7e34;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0b3b5c;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #1e7e34;
+      border-bottom: 4px solid #9fc9f3;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      max-width: 550px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .hero-stats div {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #0b3b5c;
+    }
+
+    .hero-stats small {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #4a5e6e;
+    }
+
+    .hero-image {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 30px;
+      box-shadow: 0 25px 40px -15px rgba(0, 40, 80, 0.25);
+    }
+
+    /* Trust badges */
+    .trust-bar {
+      background: white;
+      padding: 24px 0;
+      border-bottom: 1px solid #e0ecf9;
+      border-top: 1px solid #e0ecf9;
+    }
+
+    .trust-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .trust-items div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .trust-items i {
+      font-size: 1.8rem;
+      color: #1e7e34;
+    }
+
+    /* Section headings */
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0b3b5c;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #4f6f8f;
+      max-width: 700px;
+      margin: 0 auto 48px;
+      font-size: 1.1rem;
+    }
+
+    /* Product cards */
+    .products {
+      padding: 80px 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 24px;
+      padding: 28px 20px 24px;
+      box-shadow: 0 12px 30px rgba(0, 30, 60, 0.06);
+      transition: all 0.25s;
+      text-align: center;
+      border: 1px solid #e6f0fa;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 40px rgba(0, 60, 100, 0.12);
+      border-color: #b8d6f0;
+    }
+
+    .product-icon {
+      font-size: 3rem;
+      color: #1e7e34;
+      margin-bottom: 18px;
+    }
+
+    .product-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+      color: #0b3b5c;
+    }
+
+    .product-card p {
+      color: #526e85;
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+      min-height: 48px;
+    }
+
+    .product-card .price {
+      font-weight: 700;
+      color: #0b3b5c;
+      font-size: 1.2rem;
+      margin-bottom: 18px;
+    }
+
+    .product-card .price small {
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: #7c8f9e;
+    }
+
+    .product-card .btn {
+      padding: 8px 28px;
+      font-size: 0.9rem;
+    }
+
+    /* Why choose us */
+    .features {
+      background: #e3effb;
+      padding: 80px 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 35px;
+      margin-top: 20px;
+    }
+
+    .feature-item {
+      background: white;
+      padding: 32px 20px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.02);
+    }
+
+    .feature-item i {
+      font-size: 2.5rem;
+      background: #d9e9fa;
+      color: #0b3b5c;
+      padding: 18px;
+      border-radius: 60px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #0b3b5c;
+    }
+
+    .feature-item p {
+      color: #4b657a;
+      font-size: 0.95rem;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 0;
+      background: white;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: #f8fcff;
+      border-radius: 24px;
+      padding: 30px 26px;
+      border-left: 6px solid #1e7e34;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.02);
+    }
+
+    .testimonial-card i {
+      color: #f7b731;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #2f4050;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-card h5 {
+      font-weight: 700;
+      color: #0b3b5c;
+    }
+
+    .testimonial-card span {
+      font-weight: 400;
+      color: #6e8ba0;
+      font-size: 0.9rem;
+    }
+
+    /* CTA section */
+    .cta {
+      background: #0b3b5c;
+      color: white;
+      padding: 60px 0;
+      border-radius: 0;
+      margin: 40px 0 0;
+    }
+
+    .cta .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      opacity: 0.85;
+      max-width: 600px;
+    }
+
+    .cta .btn {
+      background: #f7b731;
+      color: #0b3b5c !important;
+      font-weight: 700;
+      padding: 14px 38px;
+      font-size: 1.1rem;
+    }
+
+    .cta .btn:hover {
+      background: #e5a41e;
+      color: #0b3b5c !important;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f2637;
+      color: #cbdae7;
+      padding: 50px 0 20px;
+      font-size: 0.95rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .footer-col p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-col i {
+      margin-right: 8px;
+      color: #1e7e34;
+    }
+
+    .footer-col a {
+      color: #cbdae7;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e405a;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.9rem;
+    }
+
+    .social-icons i {
+      font-size: 1.4rem;
+      margin-left: 16px;
+      color: #8aaec9;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .social-icons i:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-stats {
+        gap: 20px;
+      }
+
+      .cta .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .top-bar .container {
+        justify-content: center;
+      }
+
+      .trust-items {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top info bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div>
+        <i class="fas fa-phone-alt"></i> +91 98765 43210 &nbsp; | &nbsp;
+        <i class="fas fa-envelope"></i> sales@medicareequip.in
+      </div>
+      <div>
+        <i class="fas fa-truck"></i> Free shipping across India
+        <a href="#"><i class="fas fa-user"></i> Dealer Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container navbar">
+      <div class="logo">
+        <h2>MediCare <span>Equipments</span></h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="btn">Get Quote</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge">Trusted by 1200+ hospitals in India</div>
+        <h1>Advanced <span>Hospital Equipment</span> for Indian Healthcare</h1>
+        <p>From ICU ventilators to diagnostic tools — we supply certified, reliable medical equipment across India with installation & support.</p>
+        <a href="#" class="btn" style="padding: 14px 36px; font-size: 1rem;"><i class="fas fa-cart-plus" style="margin-right: 10px;"></i> Browse Catalogue</a>
+        <a href="#" class="btn btn-outline" style="margin-left: 12px; padding: 14px 30px;">Contact Sales</a>
+
+        <div class="hero-stats">
+          <div>500+ <small>Products</small></div>
+          <div>24/7 <small>Support</small></div>
+          <div>ISO <small>Certified</small></div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- placeholder medical/hospital illustration (fontawesome + svg pattern) -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='400' viewBox='0 0 500 400'%3E%3Crect width='500' height='400' fill='%23d9e9fa' rx='30'/%3E%3Cpath d='M100 250 L400 250 L400 300 L100 300 Z' fill='%23618ebd' opacity='0.3'/%3E%3Ccircle cx='200' cy='180' r='70' fill='%231e7e34' opacity='0.15'/%3E%3Ccircle cx='350' cy='240' r='50' fill='%230b3b5c' opacity='0.1'/%3E%3Cpath d='M250 110 L270 150 L320 150 L280 180 L295 230 L250 200 L205 230 L220 180 L180 150 L230 150 Z' fill='%230b3b5c' opacity='0.2'/%3E%3Ctext x='190' y='340' font-family='Arial' font-size='20' fill='%230b3b5c' font-weight='bold' opacity='0.5'%3EMedical Equipment%3C/text%3E%3C/svg%3E" alt="Hospital equipment illustration">
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust badges -->
+  <div class="trust-bar">
+    <div class="container trust-items">
+      <div><i class="fas fa-check-circle"></i> ISO 13485 Certified</div>
+      <div><i class="fas fa-truck-fast"></i> Pan-India Delivery</div>
+      <div><i class="fas fa-tools"></i> Installation & Training</div>
+      <div><i class="fas fa-shield-alt"></i> 2 Year Warranty</div>
+    </div>
+  </div>
+
+  <!-- Product section -->
+  <section class="products">
+    <div class="container">
+      <h2 class="section-title">Best Selling Hospital Equipment</h2>
+      <p class="section-sub">High-quality, reliable medical devices for hospitals, clinics, and diagnostic centres across India.</p>
+
+      <div class="product-grid">
+        <!-- product 1 -->
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3>Patient Monitor</h3>
+          <p>Multi-parameter vital signs monitor with ECG, SpO2, NIBP, temp, and resp.</p>
+          <div class="price">₹1,45,000 <small>+ GST</small></div>
+          <a href="#" class="btn">Enquire Now</a>
+        </div>
+        <!-- product 2 -->
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-lungs"></i></div>
+          <h3>ICU Ventilator</h3>
+          <p>Advanced turbine-based ventilator with invasive & non-invasive modes.</p>
+          <div class="price">₹4,85,000 <small>+ GST</small></div>
+          <a href="#" class="btn">Enquire Now</a>
+        </div>
+        <!-- product 3 -->
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-wheelchair"></i></div>
+          <h3>Electric Hospital Bed</h3>
+          <p>5-function electric bed with remote, side rails, and IV pole.</p>
+          <div class="price">₹82,000 <small>+ GST</small></div>
+          <a href="#" class="btn">Enquire Now</a>
+        </div>
+        <!-- product 4 -->
+        <div class="product-card">
+          <div class="product-icon"><i class="fas fa-syringe"></i></div>
+          <h3>Infusion Pump</h3>
+          <p>Volumetric infusion pump with air-in-line detection and occlusion alarm.</p>
+          <div class="price">₹32,500 <small>+ GST</small></div>
+          <a href="#" class="btn">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Indian Hospitals Trust Us</h2>
+      <p class="section-sub">We combine global quality with local service and support.</p>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <i class="fas fa-medal"></i>
+          <h4>Premium Quality</h4>
+          <p>All equipment meets CE, ISO, and Indian regulatory standards.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-headset"></i>
+          <h4>24/7 Support</h4>
+          <p>Dedicated service team across major cities in India.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-indian-rupee-sign"></i>
+          <h4>Best Pricing</h4>
+          <p>Direct import & bulk pricing for hospitals and dealers.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-chalkboard-user"></i>
+          <h4>Training Included</h4>
+          <p>On-site training for doctors, nurses, and technicians.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-sub">Trusted by leading hospitals and clinics across India.</p>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <p>“MediCare Equipments delivered and installed 15 ventilators in our COVID ward within 48 hours. Excellent service.”</p>
+          <h5>Dr. R. Mehta</h5>
+          <span>City Hospital, Mumbai</span>
+        </div>
+        <div class="testimonial-card">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <p>“Their patient monitors are reliable and the after-sales support is prompt. Highly recommended for Indian hospitals.”</p>
+          <h5>Dr. Ananya Sharma</h5>
+          <span>Sanjeevani Clinic, Delhi</span>
+        </div>
+        <div class="testimonial-card">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          <p>“We purchased 30 electric beds. The quality is excellent and the team provided full training to our staff.”</p>
+          <h5>Mr. S. Nair</h5>
+          <span>Apex Multispeciality, Kochi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div>
+        <h2>Need a custom quote for your hospital?</h2>
+        <p>Share your requirements — we'll provide a tailored proposal within 24 hours.</p>
+      </div>
+      <a href="#" class="btn"><i class="fas fa-file-invoice"></i> Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>MediCare Equipments</h4>
+          <p><i class="fas fa-map-pin"></i> 42, Medical Hub, Sector 18,<br> Gurugram, Haryana - 122001</p>
+          <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope"></i> sales@medicareequip.in</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <a href="#">ICU Equipment</a>
+          <a href="#">Diagnostic Tools</a>
+          <a href="#">Surgical Instruments</a>
+          <a href="#">Patient Care</a>
+          <a href="#">Laboratory</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Shipping Policy</a>
+          <a href="#">FAQs</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025 MediCare Equipments. All rights reserved. GST: 07ABCDE1234F1Z5</div>
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-whatsapp"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
